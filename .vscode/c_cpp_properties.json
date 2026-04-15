@@ -8,11 +8,12 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/include",
-                "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/src",
-                "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/.pio/build/frdm_kl25z/zephyr/include/generated/zephyr",
+                "C:/Users/Aluno/.vscode/Aluno/include",
+                "C:/Users/Aluno/.vscode/Aluno/src",
+                "C:/Users/Aluno/.vscode/Aluno/lib/pwm",
+                "C:/Users/Aluno/.vscode/Aluno/.pio/build/frdm_kl25z/zephyr/include/generated/zephyr",
                 "C:/Users/Aluno/.platformio/packages/framework-zephyr/include",
-                "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/.pio/build/frdm_kl25z/zephyr/include/generated",
+                "C:/Users/Aluno/.vscode/Aluno/.pio/build/frdm_kl25z/zephyr/include/generated",
                 "C:/Users/Aluno/.platformio/packages/framework-zephyr/soc/nxp/kinetis",
                 "C:/Users/Aluno/.platformio/packages/framework-zephyr/soc/nxp/kinetis/kl2x",
                 "C:/Users/Aluno/.platformio/packages/framework-zephyr/soc/nxp/kinetis/common",
@@ -24,17 +25,17 @@
                 "C:/Users/Aluno/.platformio/packages/framework-zephyr/_pio/modules/hal/nxp/mcux/mcux-sdk-ng/drivers/common",
                 "C:/Users/Aluno/.platformio/packages/framework-zephyr/_pio/modules/hal/nxp/mcux/mcux-sdk-ng/drivers/lpsci",
                 "C:/Users/Aluno/.platformio/packages/framework-zephyr/_pio/modules/hal/nxp/mcux/mcux-sdk-ng/drivers/port",
-                "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/lib/pwm",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/include",
-                    "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/src",
-                    "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/.pio/build/frdm_kl25z/zephyr/include/generated/zephyr",
+                    "C:/Users/Aluno/.vscode/Aluno/include",
+                    "C:/Users/Aluno/.vscode/Aluno/src",
+                    "C:/Users/Aluno/.vscode/Aluno/lib/pwm",
+                    "C:/Users/Aluno/.vscode/Aluno/.pio/build/frdm_kl25z/zephyr/include/generated/zephyr",
                     "C:/Users/Aluno/.platformio/packages/framework-zephyr/include",
-                    "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/.pio/build/frdm_kl25z/zephyr/include/generated",
+                    "C:/Users/Aluno/.vscode/Aluno/.pio/build/frdm_kl25z/zephyr/include/generated",
                     "C:/Users/Aluno/.platformio/packages/framework-zephyr/soc/nxp/kinetis",
                     "C:/Users/Aluno/.platformio/packages/framework-zephyr/soc/nxp/kinetis/kl2x",
                     "C:/Users/Aluno/.platformio/packages/framework-zephyr/soc/nxp/kinetis/common",
@@ -46,7 +47,6 @@
                     "C:/Users/Aluno/.platformio/packages/framework-zephyr/_pio/modules/hal/nxp/mcux/mcux-sdk-ng/drivers/common",
                     "C:/Users/Aluno/.platformio/packages/framework-zephyr/_pio/modules/hal/nxp/mcux/mcux-sdk-ng/drivers/lpsci",
                     "C:/Users/Aluno/.platformio/packages/framework-zephyr/_pio/modules/hal/nxp/mcux/mcux-sdk-ng/drivers/port",
-                    "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/lib/pwm",
                     ""
                 ]
             },
@@ -63,7 +63,7 @@
             ],
             "cStandard": "c99",
             "forcedInclude": [
-                "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/.pio/build/frdm_kl25z/zephyr/include/generated/zephyr/autoconf.h",
+                "C:/Users/Aluno/.vscode/Aluno/.pio/build/frdm_kl25z/zephyr/include/generated/zephyr/autoconf.h",
                 "C:/Users/Aluno/.platformio/packages/framework-zephyr/include/zephyr/toolchain/zephyr_stdint.h",
                 ""
             ],
@@ -76,7 +76,7 @@
                 "-isystem",
                 "C:/Users/Aluno/.platformio/packages/framework-zephyr/lib/libc/common/include",
                 "-isystem",
-                "C:/Users/Aluno/Documents/PlatformIO/Projects/260407-095512-zephyr-blink/.pio/build/frdm_kl25z/modules/picolibc/picolibc/include",
+                "C:/Users/Aluno/.vscode/Aluno/.pio/build/frdm_kl25z/modules/picolibc/picolibc/include",
                 "-isystem",
                 "c:/users/aluno/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/8.2.1/include",
                 "-isystem",

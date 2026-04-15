@@ -1,46 +1,30 @@
-#include <zephyr/kernel.h>
-#include <zephyr/device.h>
-#include <zephyr/drivers/gpio.h>
-#include <pwm_z42.h>                // Biblioteca personalizada com funções de controle do TPM (Timer/PWM Module)
+#include <zephyr.h>
+#include <device.h>
+#include <drivers/gpio.h>
 
-#define SLEEP_TIME_MS 1000
-
-// Define o LED usando Device Tree
-#define LED0_NODE DT_ALIAS(led0)
-
-// Verifica se o LED está definido no Device Tree
-#if DT_NODE_HAS_STATUS(LED0_NODE, okay)
-static const struct gpio_dt_spec led0 = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
-#else
-#error "Unsupported board: led0 devicetree alias is not defined"
-#endif
-
-
+#define INPUT_PORT  "GPIO_4"   // Porta E = GPIO_4 no seu .dts
+#define INPUT_PIN   20         // PTE20
 
 void main(void)
 {
-    int ret0;
+    const struct device *input_dev;
+    int ret, val;
 
-    // Verifica se o device está pronto
-    if (!gpio_is_ready_dt(&led0)) {
-        printk("Error: LED device %s is not ready\n", led0.port->name);
+    input_dev = device_get_binding(INPUT_PORT);
+    if (!input_dev) {
+        printk("Erro ao acessar porta %s\n", INPUT_PORT);
         return;
     }
-    
-    // Configura o pino como saída
-    ret0 = gpio_pin_configure_dt(&led0, GPIO_OUTPUT_ACTIVE);
-    if (ret0 < 0) {
-        printk("Error %d: failed to configure LED pin\n", ret0);
+
+    ret = gpio_pin_configure(input_dev, INPUT_PIN, GPIO_INPUT);
+    if (ret != 0) {
+        printk("Erro ao configurar pino %d\n", INPUT_PIN);
         return;
     }
-    
-    printk("LED blinking on %s pin %d\n", led0.port->name, led0.pin);
-    
+
     while (1) {
-            gpio_pin_set_dt(&led0, 1); // on green
-            k_msleep(SLEEP_TIME_MS);
-            gpio_pin_set_dt(&led0, 0); // off green
-            k_msleep(SLEEP_TIME_MS);
+        val = gpio_pin_get(input_dev, INPUT_PIN);
+        printk("Valor do PTE20: %d\n", val);
+        k_msleep(500);
     }
-    
 }
